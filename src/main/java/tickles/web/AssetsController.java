@@ -27,7 +27,8 @@ public class AssetsController {
 	@Autowired
 	private EventStream es;
 	
-	@RequestMapping(method=RequestMethod.POST,
+	@RequestMapping(path="/assets",
+					method=RequestMethod.POST,
 					consumes="application/json",
 					produces="application/json")
 	public ResponseEntity<String> addAsset(Asset asset){

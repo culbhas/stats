@@ -27,6 +27,9 @@ targetCompatibility = 1.8
 dependencies {
     // tag::jetty[]
     compile("org.springframework.boot:spring-boot-starter-web")
+    //compile("org.springframework.boot:spring-context-support:4.+")
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.0.RELEASE'
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.3'
     testCompile("junit:junit")
 }
 
