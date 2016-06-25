@@ -7,4 +7,7 @@ package tickles.web.data;
  */
 public interface EventTracker {
 
+	public String id();
+	
+	
 }

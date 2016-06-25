@@ -2,6 +2,7 @@ package tickles.web.data;
 
 import java.util.Date;
 import java.util.Map;
+import java.util.UUID;
 
 public class Asset implements EventTracker{
 
@@ -14,6 +15,9 @@ public class Asset implements EventTracker{
 	
 	private Map<String,String> attributes;
 
+	public Asset(){
+		id = UUID.randomUUID().toString();
+	}
 	public String getId() {
 		return id;
 	}
@@ -68,6 +72,12 @@ public class Asset implements EventTracker{
 
 	public void setAttributes(Map<String, String> attributes) {
 		this.attributes = attributes;
+	}
+
+	@Override
+	public String id() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

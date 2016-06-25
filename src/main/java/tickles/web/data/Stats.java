@@ -1,6 +1,7 @@
 package tickles.web.data;
 
 import java.sql.Date;
+import java.util.UUID;
 
 /**
  * Defines a resource to submit the test stats 
@@ -16,8 +17,10 @@ import java.sql.Date;
 public class Stats implements EventTracker{
 
 	private String key;
+	private String id;
 	private long timeTaken;
 	private Date time;
+	
 	public String getKey() {
 		return key;
 	}
@@ -35,6 +38,10 @@ public class Stats implements EventTracker{
 	}
 	public void setTime(Date time) {
 		this.time = time;
+	}
+	@Override
+	public String id() {		
+		return id;
 	}
 	
 	

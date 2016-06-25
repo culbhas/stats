@@ -1,5 +1,6 @@
 package tickles.es;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import tickles.web.data.EventTracker;
@@ -13,7 +14,11 @@ import tickles.web.data.EventTracker;
 @Component
 public class EventStream {
 
+	@Autowired
+	private EventStreamQueue worker;
+	
 	public String submit(EventTracker data){
-		return null;
+		worker.store(data);
+		return data.id();
 	}
 }
